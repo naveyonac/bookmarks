@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const bookmarkController = require('./../controllers/mainController')
+const mainController = require('./../controllers/mainController')
 
-router.get('/', bookmarkController.index)
+router.get('/', mainController.index)
 
 module.exports = router
