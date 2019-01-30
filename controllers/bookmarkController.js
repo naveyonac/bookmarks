@@ -3,9 +3,13 @@ const mongoose = require('./../models/bookmarkModel')
 const bookmark = mongoose.model('bookmarkModel')
 
 module.exports = {
-    index: (req, res) => {
-        res.render('bookmarkViews/indexBookmark', {
-            link: mongoose.find()
+    index: (req, res,) => {
+        // const db = req.db
+        // let collection = db.collection('bookmarkmodels')
+        // let links = collection.link
+        bookmark.find().then(result => {
+            // let links = result.link
+            res.render('bookmarkViews/indexBookmark', {result})
         })
     },
     new: (req, res) => {
@@ -17,7 +21,7 @@ module.exports = {
             read: req.body.read
         }).then(newBookmark => {
             console.log(newBookmark)
-            res.redirect('/')
+            res.redirect('/bookmark')
         })
     },
 }
