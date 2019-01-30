@@ -1,11 +1,12 @@
-const mongoose = require('mongoose')
+const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Bookmark = new Schema ({
     link: String,
-    read: Boolean,
+    read: Boolean, //search what data type a radio button is
 })
 
-module.exports = {
-    Bookmark: mongoose.model('Bookmark', Bookmark)
-}
+mongoose.model('bookmarkModel', Bookmark)
+
+
+module.exports = mongoose
