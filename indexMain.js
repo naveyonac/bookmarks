@@ -10,12 +10,12 @@ app.use(bodyParser.json())
 
 app.set('view engine', 'hbs')
 app.use(require('./routes/indexRoutes.js'))
-app.engine('hbs', hbs({ defaultLayout: 'main'}))
 
+//imports css static files into handlebars
 app.use(express.static(path.join(__dirname, '/public')))
-// app.use(express.static('public'))
-// app.use(express.static(__dirname + 'public'))
 
+
+//starts live server on port 2000
 app.listen(2000, (req, res) => {
     console.log('listening on port 2000')
 })
