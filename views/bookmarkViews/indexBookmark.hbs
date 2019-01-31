@@ -9,10 +9,15 @@
     <title>Bookmark Index</title>
 </head>
 <body>
-    <h1>This is a collection of all saved bookmarks</h1>
+    <h1>This is a collection of all your saved bookmarks</h1>
         <ul class="bookmarkList">
             {{#each result}}
-            <li>{{this.name}}<br>{{this.link}}</li>    
+            <li><a href="/bookmark/{{id}}">{{this.name}}<br>{{this.link}}</a></li>
+            {{!-- <form action="/bookmark/:id" method="delete"></form>
+            <input type="submit" value="delete"> --}}
+            </form>
+            {{!-- <button>Edit</button>
+            <button>Delete</button> --}}
             {{/each}}
         </ul>
 </body>

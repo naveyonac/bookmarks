@@ -25,4 +25,11 @@ module.exports = {
             res.redirect('/bookmark')
         })
     },
+    showOne: (req, res) => {
+        res.render('bookmarkViews/showOneBookmark',)
+    },
+    destroy: (req, res) => {
+
+    }
+
 }
