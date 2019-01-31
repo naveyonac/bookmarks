@@ -1,9 +1,12 @@
-const { User } = require('./../models/userModel')
+const mongoose = require('./../models/userModel')
+
+
+const User = mongoose.model('userModel')
 
 module.exports = {
     index: (req, res) => {
-    User.find({}).then((data) => {
-        res.render('UsersViews/usersViews', data)
+    User.find().then((data) => {
+        res.render('UserViews/userViews', data)
         })
     },
 
@@ -14,10 +17,10 @@ module.exports = {
     create: (req, res) => {
         User.create({
             userName: req.body.userName,
-            email: req.body.email,
             password: req.body.password
         }).then(newUser => {
-            res.redirect('/')
+            console.log(newUser)
+            // res.redirect('/', newUser)
         })
     }
 
