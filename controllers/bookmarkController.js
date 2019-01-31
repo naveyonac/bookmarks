@@ -26,10 +26,14 @@ module.exports = {
         })
     },
     showOne: (req, res) => {
-        res.render('bookmarkViews/showOneBookmark',)
+        bookmark.find({ _id: req.params.id}).then(result => {
+            res.render('bookmarkViews/showOneBookmark', {result})
+        })
     },
     destroy: (req, res) => {
-
+        bookmark.findOneAndRemove({_id: req.params.id}).then(() => {
+            res.redirect('/bookmark')
+        })
     }
 
 }

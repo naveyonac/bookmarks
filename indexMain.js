@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const path = require('path')
 const hbs = require('hbs')
+const methodOverride = require('method-override')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
