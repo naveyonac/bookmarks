@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bookmarkIndex.css">
     <title>Bookmark Index</title>
 </head>
 <body>
     <h1>This is a collection of all saved bookmarks</h1>
         <ul class="bookmarkList">
             {{#each result}}
-            <li>{{this.link}}</li>    
+            <li>{{this.name}}:<br>{{this.link}}</li>    
             {{/each}}
         </ul>
 </body>

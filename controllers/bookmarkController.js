@@ -17,6 +17,7 @@ module.exports = {
     },
     create: (req, res) => {
         bookmark.create({
+            name: req.body.name,
             link: req.body.link,
             read: req.body.read
         }).then(newBookmark => {
