@@ -4,6 +4,9 @@ li {
     font-size: 15px;
     color: white;
     font-family: 'Varela Round', sans-serif;
+    border: 2px black solid;
+    margin: 15px;
+    border-radius: 15%;
 }
 
 body {

@@ -6,6 +6,6 @@ const Note = new Schema ({
     comment: String,
 })
 
-module.exports = {
-    Note: mongoose.model('Note', Note)
-}
+mongoose.model('Note', Note)
+
+module.exports = mongoose

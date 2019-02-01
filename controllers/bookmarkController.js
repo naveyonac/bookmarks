@@ -30,6 +30,9 @@ module.exports = {
             res.render('bookmarkViews/showOneBookmark', {result})
         })
     },
+    update: (req, res) => {
+        bookmark.find({_id: req.params.id}).then()
+    },
     destroy: (req, res) => {
         bookmark.findOneAndRemove({_id: req.params.id}).then(() => {
             res.redirect('/bookmark')

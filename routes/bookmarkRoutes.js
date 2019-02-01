@@ -7,8 +7,8 @@ router.get('/new', bookmarkController.new)
 router.post('/', bookmarkController.create)
 router.get('/:id', bookmarkController.showOne)
 // router.get('/:id/edit', bookmarkController.edit)
-// router.put('/:id', bookmarkController.update)
-router.delete('/:id', bookmarkController.destroy)
+// router.post('/:id', bookmarkController.update)
+// router.delete('/:id', bookmarkController.destroy)
 router.post('/:id', bookmarkController.destroy)
 
 module.exports = router
