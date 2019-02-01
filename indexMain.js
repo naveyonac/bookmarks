@@ -20,3 +20,6 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.listen(2000, (req, res) => {
     console.log('listening on port 2000')
 })
+
+
+//mlab database user: naveyonac pass: password1
