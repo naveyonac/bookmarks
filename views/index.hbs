@@ -8,18 +8,24 @@
     <title> {{ title }}</title>
 </head>
 <body>
-    <h1>Bookmark Saver</h1>
-    {{page}}
+    <h1>Bookmark Saver!</h1>
     <ul>
-        {{!-- <li><a href="/user/new">Sign up</a></li>
-        <li><a href="#">Log in</a></li> --}}
-    <li><form action="/user/new" method="GET">
-        <button type="submit" name="newUser">Sign Up</button>
-        </form></li>
-    {{!-- <li><form action="/bookmark/new" method="GET">
-        <button type="submit" name="new">New Bookmark</button>
-        </form></li> --}}
+                {{!-- <li><a href="/user/new">Sign up</a></li>
+                <li><a href="#">Log in</a></li> --}}
+        <li>
+            <form action="/user/new" method="GET">
+                <button type="submit" name="newUser">Sign Up</button>
+            </form>
+        </li>
+                {{!-- <li><form action="/bookmark/new" method="GET">
+                <button type="submit" name="new">New Bookmark</button>
+                </form></li> --}}
+        <li>
+            <form action="/user/login" method="GET">
+                <button type="submit" name="userLogin">Log In</button>
+            </form>
+        </li>
     </ul>
-    <p>Go to /bookmark to see the bookmark list</p>
+    <p>Log in or sign up to start saving bookmarks!</p>
 </body>
 </html>

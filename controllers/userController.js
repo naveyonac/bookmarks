@@ -20,8 +20,11 @@ module.exports = {
             password: req.body.password
         }).then(newUser => {
             console.log(newUser)
-            // res.redirect('/', newUser)
+            res.redirect('/')
         })
+    },
+    login: (req, res) => {
+        res.render('userViews/userLogin')
     }
 
 }

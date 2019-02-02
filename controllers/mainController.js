@@ -1,8 +1,7 @@
 module.exports = {
     index: (req, res) => {
         res.render('index', {
-            page: 'homepage',
-            title: 'Main Index'
+            title: 'Bookmark Saver'
             })
     }
 }

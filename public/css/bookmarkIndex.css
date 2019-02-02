@@ -16,3 +16,9 @@ body {
 h1 {
     text-align: center;
 }
+
+button {
+    font-size: 15px;
+    border-radius: 15%;
+    padding: 5px;
+}
