@@ -17,9 +17,18 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 
 //starts live server on port 2000
-app.listen(2000, (req, res) => {
-    console.log('listening on port 2000')
+// app.listen(2000, (req, res) => {
+//     console.log('listening on port 2000')
+// })
+
+
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
 })
 
 
 //mlab database user: naveyonac pass: password1
+
+
