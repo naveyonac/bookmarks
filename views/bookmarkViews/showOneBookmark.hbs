@@ -10,7 +10,7 @@
     <h1>Show One Working</h1>
     {{#each result}}
     <p>{{this.name}}</p>
-    <p>{{this.link}}</p>
+    <p><a href="{{this.link}}">{{this.link}}</a></p>
     <form action="/bookmark/{{id}}" method="POST">
     <button type="submit" name="delete">Delete</button>
     {{!-- <input type="submit" value="delete"> --}}
